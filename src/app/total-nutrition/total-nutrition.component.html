@@ -1,0 +1,60 @@
+<div class="container" style = "text-align: center">
+ <h1> Total Nutrition Details</h1>
+<table class="table table-bordered">
+    <tbody *ngIf = "nutritionDetails.totalNutrients">
+      <tr>
+        <th scope="row" >Calories</th>
+        <td scope="row">{{nutritionDetails.totalNutrients.ENERC_KCAL.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.ENERC_KCAL.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fat</th>
+        <td scope="row" >{{nutritionDetails.totalNutrients.FAT.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.FAT.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Cholesterol</th>
+        <td scope="row" >{{nutritionDetails.totalNutrients.CHOLE.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.CHOLE.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Sodium</th>
+        <td scope="row" >{{nutritionDetails.totalNutrients.NA.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.NA.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Carbohydrates</th>
+        <td scope="row"> Sugar: {{nutritionDetails.totalNutrients.SUGAR.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.SUGAR.unit}}
+        Fiber: {{nutritionDetails.totalNutrients.FIBTG.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.FIBTG.unit}}
+    </td>
+      </tr>
+      <tr>
+        <th scope="row">Protien</th>
+        <td scope="row" >{{nutritionDetails.totalNutrients.PROCNT.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.PROCNT.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row" >Vitamin</th>
+        <td scope="row">{{nutritionDetails.totalNutrients.VITD.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.VITD.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Calcium</th>
+        <td scope="row">{{nutritionDetails.totalNutrients.CA.quantity | number : '1.0-2' }} 
+        {{nutritionDetails.totalNutrients.CA.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Iron</th>
+        <td scope="row" >{{nutritionDetails.totalNutrients.FE.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.FE.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Potassium</th>
+        <td scope="row">{{nutritionDetails.totalNutrients.K.quantity | number : '1.0-2'}} 
+        {{nutritionDetails.totalNutrients.K.unit}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

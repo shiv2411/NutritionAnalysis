@@ -1,0 +1,30 @@
+<div class="container" style="text-align: center">
+  <h1>Nutrients List</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit</th>
+        <th scope="col">Food</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Weight(g)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf = "nutritionDetails.ingredients && nutritionDetails.ingredients[0].parsed">
+        <tr  *ngFor="let ingredient of nutritionDetails.ingredients">
+          <td scope="col">{{ ingredient.parsed[0].quantity }}</td>
+          <td scope="col">{{ ingredient.parsed[0].measure }}</td>
+          <td scope="col">{{ ingredient.parsed[0].foodMatch }}</td>
+          <td scope="col">
+            {{ ingredient.parsed[0].nutrients.ENERC_KCAL.quantity | number : '1.0-2' }}
+          </td>
+          <td scope="col">{{ ingredient.parsed[0].weight | number : '1.0-2' }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" type="button" (click)="total()">
+    Total Nutrition
+  </button>
+</div>

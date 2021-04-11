@@ -1,0 +1,23 @@
+<div *ngIf="errorMessage" class="alert alert-warning">
+  <strong>Warning!</strong> {{ errorMessage }}
+</div>
+<div class="container" style="text-align: center">
+  <h1>
+    {{ title }}
+  </h1>
+  <p>
+    Enter an ingredient list for what you are cooking, like "1 cup rice, 200 gm orange", etc.
+    <br />
+    Enter each ingredient on a new line.
+  </p>
+  <textarea [(ngModel)]="ingredients.ingr" id="" cols="50" rows="10"></textarea>
+  <br />
+  <button
+    class="btn btn-primary"
+    type="button"
+    [disabled]="!ingredients.ingr"
+    (click)="analyse()"
+  >
+    Analyse
+  </button>
+</div>
